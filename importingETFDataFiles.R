@@ -73,7 +73,9 @@ ETFDataNormoReact  <-  join(ETFDataNormo, ETFlookup, by = 'subject')
 
 
 ## while all this data might be needed at some point for this particular 
-## analysis I am only interested in a subset that 
+## analysis I am only interested in a subset that runs from the minimum
+## ETCO2 to the end of the file. Here is this defined by the time being 
+## greater or equal to the time at the minETCO2 
 
 minETFToEnd  <- function (ds) {
   subset(ds, subset = ds$time >= ds$time[which.min(ds$ETCO2)])
