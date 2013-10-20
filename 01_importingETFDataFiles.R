@@ -1,8 +1,8 @@
+
 library(plyr)      # for data aggregation
 library(reshape2)  # for function colsplit() 
 library(lubridate) # for working with time ms()
 
-setwd("~/Rwork/ETF/Ranalyses")
 
 dataImport  <- function(ds) {
 
@@ -16,12 +16,12 @@ dataImport  <- function(ds) {
    ds <- cbind(ds, colsplit(ds$subj, "_", 
                             c('subject', 'condition')))   
 
-   ## remove split col (could improve by not duplicating)    
+   ## remove split col (could improve by not duplicating in the first place)    
    ds$subj  <- NULL                               
 
    ## treats subject number as factor which helps with graphing 
    ## as should be non-continuous and adds leading zeros to subject   
-   ds$subject  <- sprintf("%05s", as.factor(ds$subject))  
+   ds$subject  <- sprintf("%05s", as.character(ds$subject))  
 
    ## remove extra lines with NA in cols 1 through 4 excel nonsense 
    ds <- ds[complete.cases(ds[,1:4]), ]                   
@@ -34,7 +34,7 @@ dataImport  <- function(ds) {
 ETFDataNormo <- dataImport(ETFData)
 
 ## data tidying from awful excel work that was done previously 
-## this is not pretty, but wouldn't work properly inside main function
+## this is not pretty, but wouldn't work properly inside main function above
 
 ETFDataNormo$X  <- NULL   ## removing extra cols from excel nonsense 
 ETFDataNormo$X.1 <- NULL  ## note this was better than choosing cols to keep by number
@@ -68,7 +68,9 @@ colnames(ETFDataNormo) <- lookup$replacement[
 
 # add in group information from look up table already created
 # with subject number and group information
-ETFlookup <- read.delim("lookupTableETF", sep = ",")
+ETFlookup <- read.csv("lookupTableETF", header = TRUE, 
+                      colClasses = c("NULL", "character", "character"))
+
 ETFDataNormoReact  <-  join(ETFDataNormo, ETFlookup, by = 'subject')
 
 
