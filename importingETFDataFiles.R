@@ -1,4 +1,3 @@
-
 library(plyr)      # for data aggregation
 library(reshape2)  # for function colsplit() 
 library(lubridate) # for working with time ms()
@@ -69,7 +68,7 @@ colnames(ETFDataNormo) <- lookup$replacement[
 
 # add in group information from look up table already created
 # with subject number and group information
-ETFlookup <- read.delim("lookupTableETF.txt", sep = " ")
+ETFlookup <- read.delim("lookupTableETF", sep = ",")
 ETFDataNormoReact  <-  join(ETFDataNormo, ETFlookup, by = 'subject')
 
 
