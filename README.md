@@ -5,7 +5,13 @@ Homework_06
 
 I have tried to make this example as close as possible to my own lab workflow. 
 We combine a number of different physiological signals from different pieces of equipment into one proprietary software
-program (LabChart).  I then export as a .csv file after testing.  I have one .csv file for each subject that we test.  
+program (LabChart).  I then export as a .csv file after testing.  I have one .csv file for each subject that we test. 
+In this case, the .csv files have been opened and saved as .csv files in excel - as is common in my lab - therefore, I 
+have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
+in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
+
+
+
 
 
 Instructions for use: 
@@ -50,5 +56,7 @@ Download into an empty directory (I would do this using Download ZIP option - or
 Open R and start a fresh RStudio session:
 
 * Set working directory to location where files have been downloaded
+* Open makeFile.R 
+* Run makeFile.R
 
-    Open makeFile.R, and click on "Source"
+
