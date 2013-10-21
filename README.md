@@ -12,17 +12,15 @@ Instructions for use:
 
 Download into an empty directory:
 
-    Input data: 
+* Input data: 
 
+* Scripts: 01_importingETFDataFiles.R
 
-    Scripts: 01_importingETFDataFiles.R
-
-
-    Makefile-like script: Makefile.R
+* Makefile-like script: Makefile.R
 
 
 Open R and start a fresh RStudio session:
 
-    Set working directory to location where files have been downloaded
+* Set working directory to location where files have been downloaded
 
     Open makeFile.R, and click on "Source"
