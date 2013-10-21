@@ -10,7 +10,14 @@ In this case, the .csv files have been opened and saved as .csv files in excel -
 have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
 in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
 
+The data were recorded while subjects were supine and we were controlling the gasses that 
 
+The main outcome measure is how the blood flow to the brain is altered by different levels of carbon dioxide (CO2).  
+We know that the cerebral vasculature is sensitive to changes in CO2 (a vasoconstrictor) and we suspect that the 
+sensitivity might be altered in individuals with complete spinal cord injury that disrupts the nerves that control the 
+blood vessels in the brain.  The main two parameters that we are working with in this example are: end-tidal CO2 (ETCO2) 
+which is the peak CO2 levels that you breathe out at the end of an exhale, and middle cerebral artery blood flow velocity (MCAv)
+which is used as a surrogate measure for blood flow as the vessel that we are investigating has been shown not to change diameter very much. 
 
 
 
@@ -62,12 +69,17 @@ Open R and start a fresh RStudio session:
 Output files should include: 
 * Cleaned data: 
 * Table with fits (linear, segmented linear, sigmoidal): [`allFitsETFReactivityNormoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/allFitsETFReactivityNormoxia)
+  This will be useful to help us determine which fits we use for further analysis, and can be used to create figures directly 
+
 * Figure 01: Quick xyplot of all subjects to review shape, outliers: [`overviewFigure_ETFDataNormoReact.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/overviewFigure_ETFDataNormoReact.pdf)
 * Figure 02: Quick overview of sigmoid fits: [`quickLookSigmoidalNormoxiaBySubject.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/quickLookSigmoidalNormoxiaBySubject.pdf)
-* Figure 03: [`Linear cerebral reactivity at normoxia_control.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_control.png)
-* Figure 04: [`Linear cerebral reactivity at normoxia_complete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_complete.png)
-* Figure 05: [`Linear cerebral reactivity at normoxia_incomplete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_incomplete.png)
-* Figure 06: [`sigmoidalAllGroupsETFReactivityNormoxia.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/sigmoidalAllGroupsETFReactivityNormoxia.pdf)
+* Figure 03: Linear cerebral reactivity by group: Controls [`Linear cerebral reactivity at normoxia_control.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_control.png)
+* Figure 04: Linear cerebral reactivity by group: Complete SCI [`Linear cerebral reactivity at normoxia_complete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_complete.png)
+* Figure 05: Linear cerebral reactivity by group: Incomplete SCI [`Linear cerebral reactivity at normoxia_incomplete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_incomplete.png)
+* Figure 06: Sigmoidal cerebral reactivity by group: all groups [`sigmoidalAllGroupsETFReactivityNormoxia.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/sigmoidalAllGroupsETFReactivityNormoxia.pdf)
+
+
+It should be said that these are all kind of mid-stage exploratory figures - none of which are ready for print!
 
 
 There are some errors to be expected due to the fact that all types of fits do not work with all datasets.  
