@@ -2,6 +2,7 @@
 library(plyr)      # for data aggregation
 library(reshape2)  # for function colsplit() 
 library(lubridate) # for working with time ms()
+library(lattice)
 
 setwd("~/stat545a-2013-hw06_inskip-jes")
 

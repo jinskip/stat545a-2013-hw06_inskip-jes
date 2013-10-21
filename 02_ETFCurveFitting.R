@@ -75,11 +75,12 @@ write.table(allFitsTable, "allFitsETFReactivityNormoxia", sep = "\t", row.names 
 ggplot(allFitsTable, aes(x = group, y = linSlope)) +
          geom_point()
 
-ggplot(ETFData, aes(x = ETCO2, y = MCAint, color = subject)) +
-  geom_point() + 
-  geom_smooth(aes(group = subject), method = "lm", se = FALSE) + 
-  facet_wrap(~ group) +
-  theme(legend.position = "none") 
+linFitByGroup <- ggplot(ETFData, aes(x = ETCO2, y = MCAint, color = subject)) +
+                   geom_point() + 
+                   geom_smooth(aes(group = subject), method = "lm", se = FALSE) + 
+                   facet_wrap(~ group) +
+                   theme(legend.position = "none") 
+ggsave("linearFitByGroupNormoxia", linFitByGroup)
 
 ## individual linear fits for closer identification of individuals
 ## includes legend 
@@ -131,7 +132,7 @@ allGroupsETFNormoxiaSigmoidal  <- ggplot(sigmoidalFitPlot,
   theme(legend.position = "none") + 
   ylab("Middle cerebral artery blood flow velocity (MCAv, m/sec)") +
   xlab("End-tidal carbon dioxide (ETCO2, mmHg)") 
-ggsave("sigmoidalAllGroupsETFReactivityNormoxia.pdf", 
+  ggsave("sigmoidalAllGroupsETFReactivityNormoxia.pdf", 
        plot = allGroupsETFNormoxiaSigmoidal)
 
 
