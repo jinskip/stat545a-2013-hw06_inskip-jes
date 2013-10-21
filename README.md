@@ -68,3 +68,9 @@ Output files should include:
 * Figure 04: [`Linear cerebral reactivity at normoxia_complete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_complete.png)
 * Figure 05: [`Linear cerebral reactivity at normoxia_incomplete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_incomplete.png)
 * Figure 06: [`sigmoidalAllGroupsETFReactivityNormoxia.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/sigmoidalAllGroupsETFReactivityNormoxia.pdf)
+
+
+There are some errors to be expected due to the fact that all types of fits do not work with all datasets.  
+The segmented line fitting in particular has three errors from datasets that it will not work on.  With the failwith() function
+these errors do not derail the whole analysis, and it is OK that they fail because they just have no breaks (or the breaks occur too close to the start or end). 
+
