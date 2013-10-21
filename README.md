@@ -1,27 +1,28 @@
 stat545a-2013-hw06_inskip-jes
 =============================
 
-Homework_06
+Homework_06: Final Project on workflow and automating R functions
 
-I have tried to make this example as close as possible to my own lab workflow. 
+I have tried to make this example as close as possible to my own lab workflow - i.e. it is imperfect in some ways! 
 We combine a number of different physiological signals from different pieces of equipment into one proprietary software
 program (LabChart).  I then export as a .csv file after testing.  I have one .csv file for each subject that we test. 
 In this case, the .csv files have been opened and saved as .csv files in excel - as is common in my lab - therefore, I 
 have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
 in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
 
-The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a breath-by-breath
-basis (also known as end-tidal forcing or ETF).  
+The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a 
+breath-by-breath basis (also known as end-tidal forcing or ETF).  
 
-Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord injury (Incomplete), 
-and individuals with complete high-level spinal cord injury (Complete). 
+Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord 
+injury (Incomplete), and individuals with complete high-level spinal cord injury (Complete). 
 
 The main outcome measure is how the blood flow to the brain is altered by different levels of carbon dioxide (CO2).  
 We know that the cerebral vasculature is sensitive to changes in CO2 (a vasoconstrictor) and we suspect that the 
 sensitivity might be altered in individuals with complete spinal cord injury that disrupts the nerves that control the 
 blood vessels in the brain.  The main two parameters that we are working with in this example are: end-tidal CO2 (ETCO2) 
-which is the peak CO2 levels that you breathe out at the end of an exhale, and middle cerebral artery blood flow velocity (MCAv)
-which is used as a surrogate measure for blood flow as the vessel that we are investigating has been shown not to change diameter very much. 
+which is the peak CO2 levels that you breathe out at the end of an exhale, and middle cerebral artery blood flow 
+velocity (MCAv) which is used as a surrogate measure for blood flow as the vessel that we are investigating has been 
+shown not to change diameter very much. 
 
 
 
@@ -87,6 +88,9 @@ It should be said that these are all kind of mid-stage exploratory figures - non
 
 
 There are some errors to be expected due to the fact that all types of fits do not work with all datasets.  
-The segmented line fitting in particular has three errors from datasets that it will not work on.  With the failwith() function
-these errors do not derail the whole analysis, and it is OK that they fail because they just have no breaks (or the breaks occur too close to the start or end). 
+The segmented line fitting in particular has three errors from datasets that it will not work on.  With the failwith() 
+function these errors do not derail the whole analysis, and it is OK that they fail because they just have no breaks 
+(or the breaks occur too close to the start or end). 
 
+When running the makeFile.R for the first time, there will be some error messages to do with deleting files that do 
+not yet exist. 
