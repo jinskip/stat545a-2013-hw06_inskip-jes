@@ -14,7 +14,8 @@ Download into an empty directory:
 
 * Input data: 
 
-* Scripts: 01_importingETFDataFiles.R
+* Scripts: [`01_importingETFDataFiles.R`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/01_importingETFDataFiles.R)
+            and [`02_ETFCurveFitting`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/02_ETFCurveFitting.R)
 
 * Makefile-like script: Makefile.R
 
