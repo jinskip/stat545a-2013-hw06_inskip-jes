@@ -10,10 +10,6 @@ In this case, the .csv files have been opened and saved as .csv files in excel -
 have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
 in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
 
-
-Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord 
-injury (Incomplete), and individuals with complete high-level spinal cord injury (Complete). 
-
 The main outcome measure is how the blood flow to the brain is altered by different levels of carbon dioxide (CO2).  
 We know that the cerebral vasculature is sensitive to changes in CO2 (a vasoconstrictor) and we suspect that the 
 sensitivity might be altered in individuals with complete spinal cord injury that disrupts the nerves that control the 
@@ -22,7 +18,9 @@ which is the peak CO2 levels that you breathe out at the end of an exhale, and m
 velocity (MCAv) which is used as a surrogate measure for blood flow as the vessel that we are investigating has been 
 shown not to change diameter very much. 
 
-The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a 
+
+Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord 
+injury (Incomplete), and individuals with complete high-level spinal cord injury (Complete). The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a 
 breath-by-breath basis (also known as end-tidal forcing or ETF).  The main point of this experiment is to look at how 
 the cerebral blood flow is affected by the levels of CO2. We manipulate CO2 by having individuals hyperventilate 
 (this lowers CO2) and hypoventilate (this happens naturally at the end of hyperventilation - people breathe less often 
@@ -31,7 +29,7 @@ afterwards). Finally, we are using an end-tidal forcing system that allows us to
 O2 and CO2).
 
 Some research groups have shown that this is a linear relationship - while others argue that it is a segmented 
-linear relationship - and still others treat the relationship as sigmoidal.  Therefore, I am planning to fit each of 
+linear relationship - and still others treat the relationship as sigmoidal.  Therefore, I am fitting each of 
 these kinds of lines and record the goodness of fit.  For the moment, I have just plotted the linear and sigmoidal
 relationships. 
 
@@ -94,7 +92,7 @@ Output files should include:
 * Figure 06: Sigmoidal cerebral reactivity by group: all groups [`sigmoidalAllGroupsETFReactivityNormoxia.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/sigmoidalAllGroupsETFReactivityNormoxia.pdf)
 
 
-It should be said that these are all kind of mid-stage exploratory figures - none of which are ready for print!
+It should be said that these are all kind of mid-stage exploratory figures - none of which are fit for print!
 
 
 There are some errors to be expected due to the fact that all types of fits do not work with all datasets.  
