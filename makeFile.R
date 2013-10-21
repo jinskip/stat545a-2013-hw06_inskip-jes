@@ -3,12 +3,12 @@
 ## analyses - I don't see myself using make 
 
 ## clean out any previous work
-outputs <- c("ETFDataNormoReact.csv",                # 01_importingETFDataFiles.R
-             "overviewFigure_ETFDataNormoReact.pdf",    # 01_importingETFDataFiles.R
-             "allFitsETFReactivityNormoxia.csv",
-             "quickLookSigmoidalNormoxiaBySubject.pdf",
-             "sigmoidalallGroupsETFReactivityNormoxia.pdf",
-             list.files(pattern = "*.png$"))
+outputs <- c("ETFDataNormoReact.csv",                       # 01_importingETFDataFiles.R
+             "overviewFigure_ETFDataNormoReact.pdf",        # 01_importingETFDataFiles.R
+             "allFitsETFReactivityNormoxia.csv",            # 02_ETFCurveFitting.R
+             "quickLookSigmoidalNormoxiaBySubject.pdf",     # 02_ETFCurveFitting.R 
+             "sigmoidalallGroupsETFReactivityNormoxia.pdf", # 02_ETFCurveFitting.R
+             list.files(pattern = "*.png$"))                # 02_ETFCurveFitting.R
 file.remove(outputs)
 
 ## run my scripts
