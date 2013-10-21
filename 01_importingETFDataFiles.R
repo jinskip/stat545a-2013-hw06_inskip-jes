@@ -90,10 +90,15 @@ ETFDataNormoReact  <- ddply(ETFDataNormoReact, ~ subject + group, minETFToEnd)
 ## reorder data 
 ETFDataNormoReact <- arrange(ETFDataNormoReact, group, subject)
 
+## nice quick way to get a look at the whole data - without group associations
+pdf("overviewFigure_ETFDataNormoReact.pdf") ## starts writing a PDF to file
+xyplot(MCAint ~ ETCO2 | subject, ETFDataNormoReact, type = "p")
+dev.off()                                   ## finishes writing PDF to file           
+
 ## write data to csv file 
 write.csv(ETFDataNormoReact, "ETFDataNormoReact", row.names = FALSE) 
 
-# other files for hypoxia and hyperoxia will be created and named accordingly
-# at a later date
+## other files for hypoxia and hyperoxia will be created and named accordingly
+## at a later date
 
 
