@@ -62,6 +62,7 @@ Open R and start a fresh RStudio session:
 Output files should include: 
 * Cleaned data: 
 * Table with fits (linear, segmented linear, sigmoidal): [`allFitsETFReactivityNormoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/allFitsETFReactivityNormoxia)
-* Figure 01: Quick overview of sigmoid fits: linearFitByGroupNormoxia
+* Figure 01: overviewFigure_ETFDataNormoReact.pdf
+* Quick overview of sigmoid fits: linearFitByGroupNormoxia
 * 
 
