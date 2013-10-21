@@ -12,7 +12,8 @@ Instructions for use:
 
 Download into an empty directory (I would do this using Download ZIP option):
 
-* Input data: [`00812_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/00812_normoxia)
+* Input data (subjectNumber_condition): 
+              [`00812_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/00812_normoxia)
               [`03261_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/03261_normoxia)
               [`04670_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/04670_normoxia)
               [`04744_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/04744_normoxia)
