@@ -39,6 +39,10 @@ segLinETF  <- function (ds){
   return (segLinVals)
 } 
 
+## using plyr to fit segmented linear fit to all subjects
+## failwith is an important funciton here because there are a few subjects
+## that do not have a segmentable relationship and the whole plyr call 
+## fails otherwise 
 segmentedLinearFits  <- ddply(ETFData, ~ subject, failwith(NULL, segLinETF))
 
 sigFit  <- function (ds) {
@@ -119,26 +123,34 @@ plot(quickLookSigmoidalNormoxia)                    # makes the actual plot
 dev.off()
 
 
-allGroupsETFReactivityNormoxiaSigmoidal  <- ggplot(sigmoidalFitPlot, aes(x = xSig, y = ySig, color = subject)) +
+allGroupsETFNormoxiaSigmoidal  <- ggplot(sigmoidalFitPlot, 
+  aes(x = xSig, y = ySig, color = subject)) +
   geom_line(size = 1) +  
   geom_point(data = ETFData, aes(x = ETFData$ETCO2, y = ETFData$MCAint)) +
   facet_wrap(~ group) +
   theme(legend.position = "none") + 
   ylab("Middle cerebral artery blood flow velocity (MCAv, m/sec)") +
   xlab("End-tidal carbon dioxide (ETCO2, mmHg)") 
-ggsave("sigmoidalAllGroupsETFReactivityNormoxia.pdf", plot = allGroupsETFReactivityNormoxiaSigmoidal)
+ggsave("sigmoidalAllGroupsETFReactivityNormoxia.pdf", 
+       plot = allGroupsETFNormoxiaSigmoidal)
 
 
 
 
 
-##
+## I have struggled with plotting the segmented line data 
+## I know that I can get ggplot to do this.
+## I have used goAnywhere to get a look at what exactly the plot.segmented()  
+## function is calling when it plots, but I have not yet been able to 
+## decipher it. Once I do, I can create a dataset with this information 
+## and then ggplot can call this dataset to generate the plot 
+
 segLinGraph <- function (ds){
   lin <- lm(MCAint ~ ETCO2, ds, subset=(time >= time[which.min(ETCO2)]))
   segLin <- segmented(lin, seg.Z = ~ ETCO2, psi=30)  #run a piecewise linear fit on xy; start 30   
   plot (segLin)
 }   
 
-testing  <- by(ETFData, ETFData$subject, failwith(NULL, segLinGraph))
+testSegLinGraph  <- segLinGraph(subset(ETFData, subject == "00812"))
 
 
