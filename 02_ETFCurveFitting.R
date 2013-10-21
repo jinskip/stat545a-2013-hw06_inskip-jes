@@ -65,7 +65,7 @@ allFitsTable <- merge(allFitsTable, sigmoidalFits,
 allFitsTable <- arrange(allFitsTable, group, subject)
 
 ## write this table to file as will be used for stats etc later on 
-write.csv(allFitsTable, "allFitsETFReactivityNormoxia", row.names = FALSE)
+write.csv(allFitsTable, "allFitsETFReactivityNormoxia", sep = "\t", row.names = FALSE)
 
 
 ggplot(allFitsTable, aes(x = group, y = linSlope)) +
