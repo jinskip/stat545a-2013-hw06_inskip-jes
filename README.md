@@ -10,7 +10,7 @@ program (LabChart).  I then export as a .csv file after testing.  I have one .cs
 
 Instructions for use: 
 
-Download into an empty directory (I would do this using Download ZIP option):
+Download into an empty directory (I would do this using Download ZIP option - or clone to Desktop):
 
 * Input data (subjectNumber_condition): 
               [`00812_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/00812_normoxia)
