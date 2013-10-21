@@ -10,9 +10,12 @@ program (LabChart).  I then export as a .csv file after testing.  I have one .cs
 
 Instructions for use: 
 
-Download into an empty directory:
+Download into an empty directory (I would do this using Download ZIP option):
 
-* Input data: 
+* Input data: [`00812_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/00812_normoxia)
+              [`03261_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/03261_normoxia)
+              [`04670_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/04670_normoxia)
+              [`04744_normoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/04744_normoxia)
 
 * Scripts: [`01_importingETFDataFiles.R`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/01_importingETFDataFiles.R)
             and [`02_ETFCurveFitting`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/02_ETFCurveFitting.R)
