@@ -20,7 +20,7 @@ Download into an empty directory (I would do this using Download ZIP option):
 * Scripts: [`01_importingETFDataFiles.R`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/01_importingETFDataFiles.R)
             and [`02_ETFCurveFitting`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/02_ETFCurveFitting.R)
 
-* Makefile-like script: Makefile.R
+* Makefile-like script: [`Makefile.R`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/makeFile.R)
 
 
 Open R and start a fresh RStudio session:
