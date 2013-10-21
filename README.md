@@ -10,8 +10,6 @@ In this case, the .csv files have been opened and saved as .csv files in excel -
 have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
 in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
 
-The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a 
-breath-by-breath basis (also known as end-tidal forcing or ETF).  
 
 Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord 
 injury (Incomplete), and individuals with complete high-level spinal cord injury (Complete). 
@@ -24,6 +22,18 @@ which is the peak CO2 levels that you breathe out at the end of an exhale, and m
 velocity (MCAv) which is used as a surrogate measure for blood flow as the vessel that we are investigating has been 
 shown not to change diameter very much. 
 
+The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a 
+breath-by-breath basis (also known as end-tidal forcing or ETF).  The main point of this experiment is to look at how 
+the cerebral blood flow is affected by the levels of CO2. We manipulate CO2 by having individuals hyperventilate 
+(this lowers CO2) and hypoventilate (this happens naturally at the end of hyperventilation - people breathe less often 
+afterwards). Finally, we are using an end-tidal forcing system that allows us to increase CO2 to a high range 
+(subjects breathe through a bag that we can fill with air of a variety of different gas compositions - more or less 
+O2 and CO2).
+
+Some research groups have shown that this is a linear relationship - while others argue that it is a segmented 
+linear relationship - and still others treat the relationship as sigmoidal.  Therefore, I am planning to fit each of 
+these kinds of lines and record the goodness of fit.  For the moment, I have just plotted the linear and sigmoidal
+relationships. 
 
 
 Instructions for use: 
