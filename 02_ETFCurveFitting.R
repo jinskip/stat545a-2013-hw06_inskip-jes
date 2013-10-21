@@ -126,7 +126,7 @@ allGroupsETFReactivityNormoxiaSigmoidal  <- ggplot(sigmoidalFitPlot, aes(x = xSi
   theme(legend.position = "none") + 
   ylab("Middle cerebral artery blood flow velocity (MCAv, m/sec)") +
   xlab("End-tidal carbon dioxide (ETCO2, mmHg)") 
-ggsave("sigmoidalallGroupsETFReactivityNormoxia.pdf", plot = allGroupsETFReactivityNormoxiaSigmoidal)
+ggsave("sigmoidalAllGroupsETFReactivityNormoxia.pdf", plot = allGroupsETFReactivityNormoxiaSigmoidal)
 
 
 
