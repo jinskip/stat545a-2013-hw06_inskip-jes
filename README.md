@@ -10,7 +10,8 @@ In this case, the .csv files have been opened and saved as .csv files in excel -
 have spent a great deal of my time working on the first script that cleans this data.  This was a valuable exercise 
 in learning how to manipulate messy data without the artisanal excel work, which is a specialty of my current supervisor. 
 
-The data were recorded while subjects were supine and we were controlling the gasses that they breathe.  
+The data were recorded while subjects were supine and we were controlling the gasses that they breathe on a breath-by-breath
+basis (also known as end-tidal forcing or ETF).  
 
 Subjects were individuals with no neurological damage (Controls), individuals with incomplete spinal cord injury (Incomplete), 
 and individuals with complete high-level spinal cord injury (Complete). 
