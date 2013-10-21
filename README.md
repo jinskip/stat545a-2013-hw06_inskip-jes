@@ -62,7 +62,9 @@ Open R and start a fresh RStudio session:
 Output files should include: 
 * Cleaned data: 
 * Table with fits (linear, segmented linear, sigmoidal): [`allFitsETFReactivityNormoxia`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/allFitsETFReactivityNormoxia)
-* Figure 01: overviewFigure_ETFDataNormoReact.pdf
-* Quick overview of sigmoid fits: linearFitByGroupNormoxia
-* 
-
+* Figure 01: Quick xyplot of all subjects to review shape, outliers: [`overviewFigure_ETFDataNormoReact.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/overviewFigure_ETFDataNormoReact.pdf)
+* Figure 02: Quick overview of sigmoid fits: [`quickLookSigmoidalNormoxiaBySubject.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/quickLookSigmoidalNormoxiaBySubject.pdf)
+* Figure 03: [`Linear cerebral reactivity at normoxia_control.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_control.png)
+* Figure 04: [`Linear cerebral reactivity at normoxia_complete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_complete.png)
+* Figure 05: [`Linear cerebral reactivity at normoxia_incomplete.png`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/Linear%20cerebral%20reactivity%20at%20normoxia_incomplete.png)
+* Figure 06: [`sigmoidalAllGroupsETFReactivityNormoxia.pdf`](https://github.com/jinskip/stat545a-2013-hw06_inskip-jes/blob/master/sigmoidalAllGroupsETFReactivityNormoxia.pdf)
