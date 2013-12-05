@@ -4,7 +4,7 @@ library(reshape2)  # for function colsplit()
 library(lubridate) # for working with time ms()
 library(lattice)
 
-setwd("~/stat545a-2013-hw06_inskip-jes")
+#setwd("~/stat545a-2013-hw06_inskip-jes")
 
 dataImport  <- function(ds) {
 
@@ -98,7 +98,7 @@ xyplot(MCAint ~ ETCO2 | subject, ETFDataNormoReact, type = "p")
 dev.off()                                   ## finishes writing PDF to file           
 
 ## write data to csv file 
-write.csv(ETFDataNormoReact, "ETFDataNormoReact", row.names = FALSE) 
+write.csv(ETFDataNormoReact, "ETFDataNormoReact.csv", row.names = FALSE) 
 
 ## other files for hypoxia and hyperoxia will be created and named accordingly
 ## at a later date

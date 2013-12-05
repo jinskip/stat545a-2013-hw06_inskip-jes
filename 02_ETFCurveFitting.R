@@ -6,7 +6,7 @@ library(lubridate)   ## dealing with time in a sensible manner - avoids POSIXct 
 library(lattice)     ## needed for graphing
 library(ggplot2)     ## needed for graphing 
 
-ETFData <- read.csv("ETFDataNormoReact")
+ETFData <- read.csv("ETFDataNormoReact.csv")
 
 
 ## I know there is a way to do this wil colClasses, but I did not want to specify
@@ -69,7 +69,8 @@ allFitsTable <- merge(allFitsTable, sigmoidalFits,
 allFitsTable <- arrange(allFitsTable, group, subject)
 
 ## write this table to file as will be used for stats etc later on 
-write.table(allFitsTable, "allFitsETFReactivityNormoxia", sep = "\t", row.names = FALSE)
+write.table(allFitsTable, "allFitsETFReactivityNormoxia.csv",
+            sep = "\t", row.names = FALSE)
 
 
 ggplot(allFitsTable, aes(x = group, y = linSlope)) +
@@ -80,7 +81,12 @@ linFitByGroup <- ggplot(ETFData, aes(x = ETCO2, y = MCAint, color = subject)) +
                    geom_smooth(aes(group = subject), method = "lm", se = FALSE) + 
                    facet_wrap(~ group) +
                    theme(legend.position = "none") 
+plot(linFitByGroup)
 ggsave("linearFitByGroupNormoxia", linFitByGroup)
+## JB gets this error here
+# Saving 7.14 x 6.28 in image
+# Error in get(as.character(FUN), mode = "function", envir = envir) : 
+#   object 'linearfitbygroupnormoxia' of mode 'function' was not found
 
 ## individual linear fits for closer identification of individuals
 ## includes legend 
